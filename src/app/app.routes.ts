@@ -5,6 +5,14 @@ export const routes: Routes = [
   {
     path: '',
     component: BaseLayoutComponent,
-    children: [],
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import(
+            './features/courses-list/pages/course-list/course-list.component'
+          ).then((m) => m.CourseListComponent),
+      },
+    ],
   },
 ];

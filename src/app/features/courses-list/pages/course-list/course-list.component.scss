@@ -1,0 +1,12 @@
+.list-dv-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-dv-item {
+  display: grid;
+  padding: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
