@@ -1,13 +1,24 @@
 <p-dataView #dv [value]="testData">
   <ng-template pTemplate="list" let-courses>
-    <div>
+    <div class="list-dv-container">
       @for (course of courses; track $index) {
-      <div>
-        <img [src]="course.image" />
-        <span>{{ course.title }}</span>
-        <span>{{ course.description }}</span>
-        <span>{{ course.tags }}</span>
-      </div>
+      <p-card [header]="course.title">
+        <ng-template pTemplate="header">
+          <img [src]="course.image" height="200px" />
+        </ng-template>
+
+        <div class="list-dv-item">
+          <span>{{ course.description }}</span>
+        </div>
+
+        <ng-template pTemplate="footer">
+          <div class="tag-container">
+            @for (tag of course.tags; track $index) {
+            <p-tag>#{{ tag }}</p-tag>
+            }
+          </div>
+        </ng-template>
+      </p-card>
       }
     </div>
   </ng-template>

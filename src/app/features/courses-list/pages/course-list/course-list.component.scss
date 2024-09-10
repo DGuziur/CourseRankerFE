@@ -1,12 +1,16 @@
 .list-dv-container {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .list-dv-item {
-  display: grid;
-  padding: 5px;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
+  font-weight: bold;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
