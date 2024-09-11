@@ -1,6 +1,6 @@
 <p-dataView #dv [value]="testData">
   <ng-template pTemplate="list" let-courses>
-    <div class="list-dv-content">
+    <div class="flex flex-wrap gap-4 justify-center">
       @for (course of courses; track $index) {
       <course-card [course]="course"></course-card>
       }
