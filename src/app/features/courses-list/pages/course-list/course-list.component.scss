@@ -1,20 +1,6 @@
-.list-dv-container {
+.list-dv-content {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-}
-
-.list-dv-item {
-  font-weight: bold;
-}
-
-.tag-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.list-card-img {
-  height: 200px;
 }

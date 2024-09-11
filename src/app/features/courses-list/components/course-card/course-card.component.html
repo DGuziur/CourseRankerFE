@@ -1,0 +1,17 @@
+<p-card [header]="course().title">
+  <ng-template pTemplate="header">
+    <img [src]="course().image" class="card-img" />
+  </ng-template>
+
+  <div class="card-description">
+    <span>{{ course().description }}</span>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <div class="card-tags">
+      @for (tag of course().tags; track $index) {
+      <p-tag>#{{ tag }}</p-tag>
+      }
+    </div>
+  </ng-template>
+</p-card>

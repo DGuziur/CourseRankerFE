@@ -1,20 +1,12 @@
 import { Component } from '@angular/core';
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
-import { TagModule } from 'primeng/tag';
-import { CardModule } from 'primeng/card';
-
-type Course = {
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-};
+import { Course } from '../../types/course.type';
 
 @Component({
   selector: 'app-course-list',
   standalone: true,
-  imports: [ButtonModule, CardModule, DataViewModule, TagModule],
+  imports: [ButtonModule, DataViewModule],
   templateUrl: './course-list.component.html',
   styleUrl: './course-list.component.scss',
 })
