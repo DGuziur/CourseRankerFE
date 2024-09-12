@@ -13,6 +13,13 @@ export const routes: Routes = [
             './features/courses-list/pages/course-list/course-list.component'
           ).then((m) => m.CourseListComponent),
       },
+      {
+        path: 'course/:id',
+        loadComponent: () =>
+          import(
+            './features/courses-list/pages/course-details/course-details.component'
+          ).then((m) => m.CourseDetailsComponent),
+      },
     ],
   },
 ];

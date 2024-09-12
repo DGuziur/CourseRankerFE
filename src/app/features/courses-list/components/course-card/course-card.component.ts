@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { TagModule } from 'primeng/tag';
 import { CardModule } from 'primeng/card';
 import { Course } from '../../types/course.type';

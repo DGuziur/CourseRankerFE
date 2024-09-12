@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
 import { Course } from '../../types/course.type';
 import { CourseCardComponent } from '../../components/course-card/course-card.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-list',
@@ -12,6 +13,8 @@ import { CourseCardComponent } from '../../components/course-card/course-card.co
   styleUrl: './course-list.component.scss',
 })
 export class CourseListComponent {
+  protected readonly router = inject(Router);
+
   testData: Course[] = [
     {
       title: 'Course 1',

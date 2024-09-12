@@ -2,7 +2,11 @@
   <ng-template pTemplate="list" let-courses>
     <div class="flex flex-wrap gap-4 justify-center">
       @for (course of courses; track $index) {
-      <course-card [course]="course"></course-card>
+      <course-card
+        class="cursor-pointer hover:scale-110 ease-in-out duration-200"
+        (click)="router.navigate(['/course', $index])"
+        [course]="course"
+      ></course-card>
       }
     </div>
   </ng-template>
