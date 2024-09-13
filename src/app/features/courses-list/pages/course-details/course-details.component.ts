@@ -11,4 +11,6 @@ import { ButtonModule } from 'primeng/button';
 })
 export class CourseDetailsComponent {
   activeIndex: number = 0;
+
+  score: number = 8.65;
 }

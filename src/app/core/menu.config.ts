@@ -4,7 +4,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     label: 'Home',
     icon: 'pi pi-home',
-    url: '/',
+    routerLink: '/',
   },
   {
     label: 'Features',

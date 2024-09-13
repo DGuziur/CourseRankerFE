@@ -3,6 +3,13 @@ import { BaseLayoutComponent } from './core/base-layout/base-layout.component';
 
 export const routes: Routes = [
   {
+    path: 'login',
+    loadComponent: () =>
+      import('./features/auth/pages/login-page/login-page.component').then(
+        (m) => m.LoginPageComponent
+      ),
+  },
+  {
     path: '',
     component: BaseLayoutComponent,
     children: [
